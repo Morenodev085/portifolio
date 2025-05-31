@@ -9,7 +9,7 @@ import { SiTypescript } from "react-icons/si";
 
 const Tecnologias = () => {
   return (
-    <Container style={{ backgroundColor: cores.cinza }} className="py-5">
+    <Container style={{ backgroundColor: cores.escuro.cinza }} className="py-5">
       {/* Título */}
       <Row className="d-flex justify-content-center mb-4">
         <Col className="d-flex justify-content-center">

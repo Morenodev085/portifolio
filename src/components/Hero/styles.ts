@@ -4,7 +4,7 @@ import { cores } from "../../styles";
 export const FullScreenContainer = styled.div`
   width: 100vw;
   height: 100vh;
-  background-color: ${cores.verde};
+  background-color: ${cores.escuro.verde};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,7 +38,7 @@ export const Perfil = styled.img`
 `;
 
 export const NomePerfil = styled.h2`
-  color: ${cores.cinza};
+  color: ${cores.escuro.cinza};
   font-size: 1.8rem;
   display: flex;
   justify-content: center;
@@ -59,7 +59,7 @@ export const ConteinerInforPerfil = styled.div`
 export const InfoPerfil = styled.p`
   width: 100%;
   margin-top: 20px;
-  color: ${cores.cinza};
+  color: ${cores.escuro.cinza};
   text-align: justify;
 
   @media (min-width: 768px) {
@@ -79,7 +79,7 @@ export const BtnPerfil = styled.button`
 
 export const BtnMode = styled.a`
 cursor: pointer;
-color: ${cores.branco};
+color: ${cores.escuro.branco};
 border: 2px solid white;
 width: 42px;
 padding: 8px;

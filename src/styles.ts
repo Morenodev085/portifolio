@@ -3,11 +3,14 @@ import { createGlobalStyle } from "styled-components";
 
 
 export const cores = {
-  fundo: '#D3D3D3',
-  verde: '#303952',
-  preto: '#000',
-  branco: '#fff',
-  cinza: '	#D3D3D3'
+  escuro:{
+    fundo: '#D3D3D3',
+    verde: '#303952',
+    preto: '#000',
+    branco: '#fff',
+    cinza: '	#D3D3D3'
+
+  }
 }
 export const GlobalCss = createGlobalStyle`
   *{
@@ -19,8 +22,8 @@ export const GlobalCss = createGlobalStyle`
 
 
   body{
-    background-color: ${cores.fundo};
-    color: ${cores.preto};
+    background-color: ${cores.escuro.fundo};
+    color: ${cores.escuro.preto};
     font-family: "Roboto","Kanit", sans-serif;
     font-size: 1.2rem;
     font-weight: 400;
@@ -28,5 +31,5 @@ export const GlobalCss = createGlobalStyle`
   }
 
   ul{list-style-type: none;}
-  a{text-decoration: none; color:${cores.preto}}
+  a{text-decoration: none; color:${cores.escuro.preto}}
 `
