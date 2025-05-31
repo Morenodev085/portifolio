@@ -8,7 +8,7 @@ import {
   BtnMode
 } from "./styles";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import foto from '../../assets/img/foto.jpeg'
+import foto from "../../assets/img/foto.jpeg"
 import { FaSun } from "react-icons/fa";
 
 
