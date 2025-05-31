@@ -18,7 +18,7 @@ export const FullScreenContainer = styled.div`
 `;
 
 export const Perfil = styled.img`
-  border-radius: 50%;
+  border-radius: 40%;
   width: 384px;
   margin-bottom: 20px;
 
@@ -47,8 +47,9 @@ export const NomePerfil = styled.h2`
 export const ConteinerInforPerfil = styled.div`
   display: flex;
   flex-direction: column;
-  width: auto;
+  max-width: 900px;
   margin: 10px 20px;
+
 
   @media (max-width: 767px) {
     width: 90%; /* Ajusta a largura para telas pequenas */
@@ -73,4 +74,19 @@ export const BtnPerfil = styled.button`
   margin-top: 10px;
   font-weight: bold;
   width: 100%;
+  cursor: pointer;
 `;
+
+export const BtnMode = styled.a`
+cursor: pointer;
+color: ${cores.branco};
+border: 2px solid white;
+width: 42px;
+padding: 8px;
+border-radius: 32px;
+top: 0;
+left: 0;
+position: absolute;
+margin-top: 32px;
+margin-left: 32px;
+`

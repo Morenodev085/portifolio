@@ -1,8 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
+
+
 export const cores = {
   fundo: '#D3D3D3',
-  verde: '#1E421E',
+  verde: '#303952',
   preto: '#000',
   branco: '#fff',
   cinza: '	#D3D3D3'
@@ -22,8 +24,9 @@ export const GlobalCss = createGlobalStyle`
     font-family: "Roboto","Kanit", sans-serif;
     font-size: 1.2rem;
     font-weight: 400;
+    max-width: 1140px;
   }
 
   ul{list-style-type: none;}
-  a{text-decoration: none;}
+  a{text-decoration: none; color:${cores.preto}}
 `
