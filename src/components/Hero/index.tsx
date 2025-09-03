@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaSun } from "react-icons/fa";
+import { FaMoon, FaSun } from "react-icons/fa";
 import {
   FullScreenContainer,
   BackgroundImage,
@@ -28,7 +28,7 @@ const Hero = () => {
         onClick={() => setIsDarkMode(!isDarkMode)}
         aria-label="Alternar tema"
       >
-        <FaSun />
+        {isDarkMode ? <FaSun/> : <FaMoon/>}
       </BtnMode>
 
       <ContentWrapper>

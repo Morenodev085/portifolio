@@ -129,8 +129,8 @@ export const BtnPerfil = styled.button`
 
 export const BtnMode = styled.button<TextProps>`
   cursor: pointer;
-  color: ${(props) => (props.isDarkMode ? cores.escuro.branco : "#111")};
-  border: 2px solid ${(props) => (props.isDarkMode ? "#fff" : "#111")};
+  color: ${(props) => (props.isDarkMode ? "#fff" : "#111")};
+  border: 4px solid ${(props) => (props.isDarkMode ? "#fff ": "#111")};
   width: 42px;
   padding: 8px;
   border-radius: 32px;
@@ -141,4 +141,5 @@ export const BtnMode = styled.button<TextProps>`
   margin-left: 32px;
   z-index: 3;
   background: transparent;
+  font-size: 16px;
 `;
