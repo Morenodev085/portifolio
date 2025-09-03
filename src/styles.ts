@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 
 
@@ -32,4 +32,9 @@ export const GlobalCss = createGlobalStyle`
 
   ul{list-style-type: none;}
   a{text-decoration: none; color:${cores.escuro.preto}}
+
+`
+
+export const SiteContainer = styled.div`
+
 `
