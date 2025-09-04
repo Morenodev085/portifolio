@@ -38,13 +38,14 @@ export const Overlay = styled.div`
 
 /* ✅ Container principal */
 export const FullScreenContainer = styled.div`
-  width: 100vw;
+  width: 99vw;
   height: 80vh;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow-y: auto;
+
 `;
 
 /* ✅ Conteúdo acima da imagem */
@@ -142,4 +143,9 @@ export const BtnMode = styled.button<TextProps>`
   z-index: 3;
   background: transparent;
   font-size: 16px;
+
+  @media (min-width: 768px) {
+      margin-top: 16px;
+  margin-left: 16px;
+  }
 `;
