@@ -128,24 +128,35 @@ export const BtnPerfil = styled.button`
   cursor: pointer;
 `;
 
-export const BtnMode = styled.button<TextProps>`
+export const BtnMode = styled.button<{ isDarkMode: boolean }>`
   cursor: pointer;
-  color: ${(props) => (props.isDarkMode ? "#fff" : "#111")};
-  border: 4px solid ${(props) => (props.isDarkMode ? "#fff ": "#111")};
-  width: 42px;
-  padding: 8px;
-  border-radius: 32px;
-  top: 0;
-  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: ${(props) => (props.isDarkMode ? "#1a1a1a" : "#f3f3f3")};
+  color: ${(props) => (props.isDarkMode ? "#f3f3f3" : "#1a1a1a")};
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
   position: absolute;
-  margin-top: 32px;
-  margin-left: 32px;
+  top: 16px;
+  left: 16px;
   z-index: 3;
-  background: transparent;
-  font-size: 16px;
+
+  &:hover {
+    transform: scale(1.1) rotate(10deg);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
 
   @media (min-width: 768px) {
-      margin-top: 16px;
-  margin-left: 16px;
+    top: 24px;
+    left: 24px;
   }
 `;
+
