@@ -17,7 +17,7 @@ type HeroProps = {
   alternarTema: () => void;            // função do App
 };
 
-const Hero = ({ temaAtual, alternarTema }: HeroProps) => {
+const Hero = ({ temaAtual }: HeroProps) => {
   const isDarkMode = temaAtual === "escuro";
 
   return (

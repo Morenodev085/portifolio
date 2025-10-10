@@ -6,7 +6,7 @@ export const TituloTec = styled.h3`
   justify-content: center;
   margin-top: 10px;
   margin-bottom: 20px;
-  color: ${cores.escuro.verde};
+  color: ${cores.escuro.destaque};
   font-size: 3rem;
 
   @media (max-width: 767px) {
