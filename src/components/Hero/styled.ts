@@ -36,17 +36,7 @@ export const Overlay = styled.div`
   z-index: 1;
 `;
 
-/* ✅ Container principal */
-export const FullScreenContainer = styled.div`
-  width: 99vw;
-  height: 80vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow-y: auto;
 
-`;
 
 /* ✅ Conteúdo acima da imagem */
 export const ContentWrapper = styled.div`
@@ -66,27 +56,27 @@ export const ContentWrapper = styled.div`
 /* Outros estilos mantidos... */
 
 export const Perfil = styled.img`
-  border-radius: 40%;
-  width: 384px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 20px;
 
-  @media (min-width: 768px) {
-    margin: 40px;
-  }
-
   @media (max-width: 767px) {
-    width: 80%;
-    max-width: 300px;
-    margin: 0;
+    width: 80vw;      /* 80% da largura da tela */
+    height: 80vw;     /* mesma altura, círculo mantido */
+    max-width: 300px; /* nunca maior que 300px no celular */
+    max-height: 300px;
   }
 `;
 
+
+
 export const NomePerfil = styled.h2<TextProps>`
-  color: ${(props) => (props.isDarkMode ? cores.escuro.branco : cores.escuro.cinza)};
+  color: ${(props) => (props.isDarkMode ? cores.escuro.texto : cores.claro.texto)};
   font-size: 3.8rem;
   display: flex;
   justify-content: center;
-
   @media (max-width: 767px) {
   font-size: 1.8rem;
   text-align: center;
@@ -107,7 +97,7 @@ export const ConteinerInforPerfil = styled.div`
 
 
 export const InfoPerfil = styled.p<TextProps>`
-  color: ${(props) => (props.isDarkMode ? cores.escuro.branco : "#111")};
+  color: ${(props) => (props.isDarkMode ? cores.escuro.texto : "#111")};
   /* outras propriedades */
   width: 100%;
   margin-top: 20px;
@@ -118,7 +108,7 @@ export const InfoPerfil = styled.p<TextProps>`
   }
 `;
 
-export const BtnPerfil = styled.button`
+export const BtnPerfil = styled.button<{ isDarkMode: boolean }>`
   border-radius: 8px;
   padding: 10px 20px;
   font-size: 16px;
@@ -126,37 +116,12 @@ export const BtnPerfil = styled.button`
   font-weight: bold;
   width: 100%;
   cursor: pointer;
-`;
-
-export const BtnMode = styled.button<{ isDarkMode: boolean }>`
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: none;
-  background: ${(props) => (props.isDarkMode ? "#1a1a1a" : "#f3f3f3")};
-  color: ${(props) => (props.isDarkMode ? "#f3f3f3" : "#1a1a1a")};
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  z-index: 3;
-
-  &:hover {
-    transform: scale(1.1) rotate(10deg);
-  }
-
-  &:active {
-    transform: scale(0.95);
-  }
-
-  @media (min-width: 768px) {
-    top: 24px;
-    left: 24px;
+  background-color: ${(props) => (props.isDarkMode ? cores.claro.texto : cores.escuro.texto)};
+  border: 2px solid ${(props) => (props.isDarkMode ? cores.escuro.texto : cores.claro.texto)};
+  a{
+    color: ${(props) => (props.isDarkMode ? cores.escuro.texto : cores.claro.texto)};
   }
 `;
+
+
 

@@ -1,35 +1,29 @@
-import { useState } from "react";
-import { FaMoon, FaSun } from "react-icons/fa";
 import {
-  FullScreenContainer,
+
   BackgroundImage,
   Overlay,
   ContentWrapper,
-  BtnMode,
   Perfil,
   ConteinerInforPerfil,
   NomePerfil,
-  // InfoPerfil,
   BtnPerfil
 } from "./styled";
 
 import foto from "../../assets/img/foto.jpeg";
+import { FullScreenContainer } from "../../styles";
 
-const Hero = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+type HeroProps = {
+  temaAtual: "claro" | "escuro";      // vem do App
+  alternarTema: () => void;            // função do App
+};
+
+const Hero = ({ temaAtual, alternarTema }: HeroProps) => {
+  const isDarkMode = temaAtual === "escuro";
 
   return (
     <FullScreenContainer>
       <BackgroundImage isDarkMode={isDarkMode} />
       <Overlay />
-
-      <BtnMode
-        isDarkMode={isDarkMode}
-        onClick={() => setIsDarkMode(!isDarkMode)}
-        aria-label="Alternar tema"
-      >
-        {isDarkMode ? <FaSun/> : <FaMoon/>}
-      </BtnMode>
 
       <ContentWrapper>
         <Perfil src={foto} alt="Foto de Perfil" />
@@ -39,14 +33,7 @@ const Hero = () => {
             Desenvolvedor Full Stack Java
           </NomePerfil>
 
-          {/* <InfoPerfil isDarkMode={isDarkMode}>
-            Desenvolvedor Full Stack JavaScript em formação pela EBAC – Escola Britânica de Artes Criativas e Tecnologia.
-            Profissional com perfil criativo. Durante minha primeira formação, produzi aulas e palestras, além de desenvolver
-            sites para empresas de relevância cultural. Esses projetos me proporcionaram uma valiosa experiência na criação de
-            conteúdo educacional e na implementação de soluções digitais que atendem às necessidades específicas de cada cliente.
-          </InfoPerfil> */}
-
-          <BtnPerfil>
+          <BtnPerfil isDarkMode={isDarkMode}>
             <a
               href="https://github.com/Morenodev085"
               target="_blank"
@@ -56,7 +43,7 @@ const Hero = () => {
             </a>
           </BtnPerfil>
 
-          <BtnPerfil>
+          <BtnPerfil isDarkMode={isDarkMode}>
             <a
               href="https://www.linkedin.com/in/morenoalmeida/"
               target="_blank"
