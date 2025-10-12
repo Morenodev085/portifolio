@@ -5,16 +5,17 @@ import styled, { createGlobalStyle } from "styled-components";
 export const cores = {
   claro: {
     nome: "claro",
-    background: "#ffffff",
-    texto: "#000000",
-    destaque: "#191970",
-    fundo: "#fff"
+    background: "#f1f7f6",
+    texto: "#021b1a",
+    destaque: "#03624C",
+    preto: "#000"
   },
   escuro: {
     nome: "escuro",
-    background: "#121212",
-    texto: "#ffffff",
-    destaque: "#00d1b2",
+    background: "#032221",
+    texto: "#aacbc4",
+    destaque: "#2cc295",
+    branco: "#f1f7f6"
   },
 };
 
@@ -28,7 +29,7 @@ export const GlobalCss = createGlobalStyle`
 
 
   body{
-    background-color: ${cores.claro.fundo};
+    background-color: ${cores.claro.background};
     color: ${cores.claro.texto};
     font-family: "Roboto","Kanit", sans-serif;
     font-size: 1.2rem;
@@ -50,8 +51,8 @@ export const BtnMode = styled.button<{ isDarkMode: boolean }>`
   height: 48px;
   border-radius: 50%;
   border: none;
-  background: ${(props) => (props.isDarkMode ? "#1a1a1a" : "#f3f3f3")};
-  color: ${(props) => (props.isDarkMode ? "#f3f3f3" : "#1a1a1a")};
+  background: ${(props) => (props.isDarkMode ? cores.escuro.background  : cores.claro.background)};
+  color: ${(props) => (props.isDarkMode ? cores.claro.background : cores.escuro.background)};
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
   position: absolute;
@@ -72,7 +73,7 @@ export const BtnMode = styled.button<{ isDarkMode: boolean }>`
     left: 24px;
   }
 `;
-export const FullScreenContainer = styled.div`
+export const FullScreenContainer = styled.div<{ isDarkMode: boolean }>`
   width: 99vw;
   height: 80vh;
   position: relative;
@@ -80,5 +81,5 @@ export const FullScreenContainer = styled.div`
   justify-content: center;
   align-items: center;
   overflow-y: auto;
-  background-color: ${({ theme }) => theme.texto};
+  background-color: ${(props) => (props.isDarkMode ? cores.claro.background : cores.escuro.background)};;
 `;

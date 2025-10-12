@@ -12,7 +12,7 @@ const AboutMe = ({ temaAtual }: AboutMeProps) => {
 
   return (
     <>
-      <FullScreenContainer>
+      <FullScreenContainer isDarkMode={isDarkMode} >
         <AboutContainer isDarkMode={isDarkMode}>
           <TextMe>
             <TituloAbout isDarkMode={isDarkMode}>About me</TituloAbout>

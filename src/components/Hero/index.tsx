@@ -21,7 +21,7 @@ const Hero = ({ temaAtual }: HeroProps) => {
   const isDarkMode = temaAtual === "escuro";
 
   return (
-    <FullScreenContainer>
+    <FullScreenContainer isDarkMode={isDarkMode}>
       <BackgroundImage isDarkMode={isDarkMode} />
       <Overlay />
 

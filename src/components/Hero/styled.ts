@@ -97,7 +97,7 @@ export const ConteinerInforPerfil = styled.div`
 
 
 export const InfoPerfil = styled.p<TextProps>`
-  color: ${(props) => (props.isDarkMode ? cores.escuro.texto : "#111")};
+  color: ${(props) => (props.isDarkMode ? cores.escuro.texto : cores.claro.texto)};
   /* outras propriedades */
   width: 100%;
   margin-top: 20px;
@@ -116,7 +116,7 @@ export const BtnPerfil = styled.button<{ isDarkMode: boolean }>`
   font-weight: bold;
   width: 100%;
   cursor: pointer;
-  background-color: ${(props) => (props.isDarkMode ? cores.claro.texto : cores.escuro.texto)};
+  background-color: ${(props) => (props.isDarkMode ? cores.claro.preto : cores.escuro.branco)};
   border: 2px solid ${(props) => (props.isDarkMode ? cores.escuro.texto : cores.claro.texto)};
   a{
     color: ${(props) => (props.isDarkMode ? cores.escuro.texto : cores.claro.texto)};

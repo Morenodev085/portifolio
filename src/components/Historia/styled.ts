@@ -56,7 +56,7 @@ export const AboutContainer = styled.div<AboutContainerProps>`
   justify-content: space-between;
   gap: 32px;        /* espaço entre texto e imagem */
   padding: 20px;
-  background-color: ${({ theme }) => theme.texto};
+  background-color: ${(props) => (props.isDarkMode ?    cores.claro.background : cores.escuro.background )};
 
   @media (max-width: 767px) {
     flex-direction: column; /* empilha no celular */
