@@ -1,10 +1,11 @@
 import Hero from "./components/Hero"
 import { cores, GlobalCss } from "./styles"
-import Tecnologias from './components/Tecnologia'
+import Tecnologias from './components/HitoricoDeProjeto'
 import AboutMe from "./components/Historia"
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import BtnMode from "./components/BtnMode";
+import HistoricoProjetos from "./components/HitoricoDeProjeto";
 
 
 
@@ -21,7 +22,7 @@ function App() {
       <BtnMode temaAtual={temaAtual} alternarTema={alternarTema} />
       <Hero temaAtual={temaAtual} alternarTema={alternarTema} />
       <AboutMe temaAtual={temaAtual}/>
-      <Tecnologias />
+      <HistoricoProjetos temaAtual={temaAtual} alternarTema={alternarTema}/>
     </ThemeProvider>
   )
 }

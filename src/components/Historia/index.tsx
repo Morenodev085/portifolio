@@ -1,7 +1,7 @@
 import { FullScreenContainer } from "../../styles";
 import { TituloAbout, TextMe, PMe, FotoMe, AboutContainer } from "./styled";
 import foto from '../../assets/img/FOTOS - RODADA DE NEGÓCIOS (84 de 98).jpg'
-
+import foto2 from '../../assets/img/FotoMuseu.jpeg'
 type AboutMeProps = {
   temaAtual: "claro" | "escuro"
 };

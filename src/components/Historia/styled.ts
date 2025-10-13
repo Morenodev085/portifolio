@@ -10,7 +10,7 @@ interface TextProps {
 
 export const TituloAbout =  styled.h2<TextProps>`
 color: ${(props) => (props.isDarkMode ? cores.claro.destaque : cores.escuro.destaque)};
-font-size: 3rem;
+font-size: 4rem;
   font-family: "BBH Sans Bartle", sans-serif;
   font-weight: 400;
   @media (max-width: 767px) {
@@ -36,7 +36,7 @@ color: ${(props) => (props.isDarkMode ? cores.claro.texto : cores.escuro.texto)}
   @media (max-width: 767px) {
     margin-top: 8px; /* aproxima do container superior */
     width: 90%;       /* opcional: deixa responsivo */
-    font-size: 0.8rem
+    font-size: 1.2rem
   }
 `
 

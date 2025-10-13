@@ -77,6 +77,7 @@ export const NomePerfil = styled.h2<TextProps>`
   font-size: 3.8rem;
   display: flex;
   justify-content: center;
+
   @media (max-width: 767px) {
   font-size: 1.8rem;
   text-align: center;
