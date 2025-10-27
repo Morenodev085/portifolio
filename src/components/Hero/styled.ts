@@ -73,7 +73,7 @@ export const Perfil = styled.img`
 
 
 export const NomePerfil = styled.h2<TextProps>`
-  color: ${(props) => (props.isDarkMode ? cores.escuro.texto : cores.claro.texto)};
+  color: ${(props) => (props.isDarkMode ? cores.escuro.texto : cores.claro.background)};
   font-size: 3.8rem;
   display: flex;
   justify-content: center;

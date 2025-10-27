@@ -13,6 +13,8 @@ color: ${(props) => (props.isDarkMode ? cores.claro.destaque : cores.escuro.dest
 font-size: 4rem;
   font-family: "BBH Sans Bartle", sans-serif;
   font-weight: 400;
+  text-align: center;
+  padding-bottom: 32px;
   @media (max-width: 767px) {
     font-size: 2rem;
   }

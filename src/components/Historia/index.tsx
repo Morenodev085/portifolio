@@ -1,7 +1,6 @@
 import { FullScreenContainer } from "../../styles";
-import { TituloAbout, TextMe, PMe, FotoMe, AboutContainer } from "./styled";
-import foto from '../../assets/img/FOTOS - RODADA DE NEGÓCIOS (84 de 98).jpg'
-import foto2 from '../../assets/img/FotoMuseu.jpeg'
+import { TituloAbout, TextMe, PMe,  AboutContainer } from "./styled";
+// import foto from '../../assets/img/FOTOS - RODADA DE NEGÓCIOS (84 de 98).jpg'
 type AboutMeProps = {
   temaAtual: "claro" | "escuro"
 };
@@ -21,7 +20,6 @@ const AboutMe = ({ temaAtual }: AboutMeProps) => {
               sites para empresas de relevância cultural. Esses projetos me proporcionaram uma valiosa experiência na criação de
               conteúdo educacional e na implementação de soluções digitais que atendem às necessidades específicas de cada cliente.</PMe>
           </TextMe>
-          <FotoMe src={foto} alt="" />
         </AboutContainer>
       </FullScreenContainer>
     </>
